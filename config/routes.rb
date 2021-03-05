@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  root 'application#hello'
+  resources :instructors
+  resources :subjects
+  resources :courses
+  root 'instructors#index'
 end
