@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <%= link_to "Home", root_path, class: "nav-link" %>
+        </li>
+      </ul>
+
+
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <% if Current.user %>
+        <li class="nav-item">
+          <span><%= Current.user.email %></span>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Logout", logout_path, method: :delete, class: "nav-link" %>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Options
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li class= "nav-itam">
+            <%= link_to "Instructors", logout_path, class: "nav-link" %>
+            </li>
+            <li class= "nav-itam">
+            <%= link_to "Courses", logout_path, class: "nav-link" %>
+            </li>
+            <li class= "nav-itam">
+            <%= link_to "Subjects", logout_path, class: "nav-link" %>
+            </li>
+          </ul>
+        </li>
+      <% else %>
+        <li class= "nav-itam">
+        <%= link_to "Sign up", sign_up_path, class: "nav-link" %>
+        </li>
+        <li class= "nav-itam">
+        <%= link_to "Login", sign_in_path, class: "nav-link" %>
+        </li>
+      <% end %>
+      </ul>
+
+      <form class="d-flex">
+        <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
