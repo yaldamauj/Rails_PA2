@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+    <title><%= yield(:title) %> | Rails PA part 2</title>
     <meta charset="utf-8">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,24 +9,14 @@
     <%= stylesheet_link_tag 'application', media: 'all',
                                            'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
     <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
       </script>
     <![endif]-->
     </head>
     <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <%= link_to "Home",'static_pages/home' %>
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Instructors",   '../instructors#index#' %></li>
-            <li><%= link_to "Courses",   '../courses#index' %></li>
-            <li><%= link_to "Subjects", '../subjects#index' %></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <%= render 'layouts/header' %>
     <div class="container">
       <%= yield %>
     
