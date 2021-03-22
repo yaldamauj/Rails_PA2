@@ -1,11 +1,7 @@
-<% provide(:title, "Home") %>
-<br>
-<h1>Welcome Rails App - Part 2</h1>
-
-<%= link_to "Sign up now!", '/sign_up' , class: "btn btn-primary" %>
-</div>
 <% if @user %>
     Logged in as: <%= @user.email %>
 <% end %>
 
+<%= link_to "Logout", logout_path, method :delete %>
+<%= button_to "Logout", logout_path, method :delete %>
 
