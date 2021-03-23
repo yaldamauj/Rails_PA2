@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :instructors
+  resources :subjects
+  resources :courses
+  resources :users
+  resources :registrations
+  resources :sessions
   get 'users/new'
   get 'static_pages/home'
 
@@ -11,10 +17,7 @@ Rails.application.routes.draw do
 
   delete "logout", to: "sessions#destroy"
   
-  resources :instructors
-  resources :subjects
-  resources :courses
-  resources :users
+
 
   root 'static_pages#home'
 end
