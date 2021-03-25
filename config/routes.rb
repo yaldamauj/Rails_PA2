@@ -24,5 +24,7 @@ Rails.application.routes.draw do
   
   get 'search' => 'pages#show'
 
+ 
+
   root 'static_pages#home'
 end

@@ -3,7 +3,7 @@ class CoursesController < ApplicationController
 
   # GET /courses or /courses.json
   def index
-    @courses = Course.all
+    @courses = Course.where(["name LIKE ?","%#{params[:search]}%" ])
   end
 
   # GET /courses/1 or /courses/1.json
@@ -55,6 +55,8 @@ class CoursesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.
