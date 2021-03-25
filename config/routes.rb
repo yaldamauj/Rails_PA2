@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :users
   resources :registrations
   resources :sessions
+  resources :enrollments
+  
   get 'users/new'
   get 'static_pages/home'
 

@@ -1,3 +1,86 @@
 // Place all the styles related to the Instructors controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+body{
+    background: #F6FDFF;
+}
+
+h1{
+    color:  #2F3F5F;
+    font-family: serif;
+    font-weight: bold;
+    font-size: xxx-large;
+    font-size: 400%;
+    margin-top: 0%;
+}
+
+
+.row {
+    border: #ededed thin solid;
+    background: white;
+    height: 70%;
+}
+
+.nopadding {
+    padding: 0 !important;
+ }
+
+.nopadding-left{
+    padding-left: 0 !important;
+}
+
+h2{
+    margin-top: 10%;
+    color: #2F3F5F;
+    font-family: serif;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+#info{
+    background: white;
+}
+
+.col{
+    height: 100%;
+}
+
+form{
+   margin-left: 10%;
+   margin-right: 10%;
+   margin-top: 10%;
+   margin-bottom: 10%;
+}
+
+.form-row .col{
+    padding-right: 0%;
+    text-align: left;
+}
+.btn{
+    background:  #2F3F5F;
+    border: none;
+}
+
+a{
+   color: #0F9BBA;
+   color: inherit;
+   text-decoration: underline;
+}
+
+h5{
+    margin-bottom: 5%;
+    margin-left: 10%;
+}
+
+#links a:link, a:hover, a:visited, a:active {
+    color: #0F9BBA;
+}
+
+.container{
+    padding-top:0% ;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+   
+}

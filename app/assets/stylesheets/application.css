@@ -13,14 +13,5 @@
  *= require_tree .
  *= require_self
  */
-header {
-    font-family: verdana, arial, helvetica, sans-serif;
-    font-size: 13px;
-    line-height: 18px;
-}
 
-nav{
-    font-family: verdana, arial, helvetica, sans-serif;
-    font-size: 13px;
-    line-height: 18px;
-}
+
