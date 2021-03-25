@@ -1,25 +1,17 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<header class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+    <div class="col-xs-9">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <% if logged_in? %>
         <li class="nav-item">
           <%= link_to "Home", root_path, class: "nav-link" %>
-        </li>
-      </ul>
-
-
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <% if Current.user %>
-        <li class="nav-item">
-          <span><%= Current.user.email %></span>
         </li>
         <li class="nav-item">
           <%= link_to "Logout", logout_path, method: :delete, class: "nav-link" %>
         </li>
-
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Options
@@ -36,7 +28,7 @@
             </li>
           </ul>
         </li>
-      <% else %>
+        <% else %>
         <li class= "nav-itam">
         <%= link_to "Sign up", sign_up_path, class: "nav-link" %>
         </li>
@@ -45,6 +37,5 @@
         </li>
       <% end %>
       </ul>
-    </div>
   </div>
-</nav>
+</header>
