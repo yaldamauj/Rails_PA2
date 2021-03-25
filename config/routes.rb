@@ -6,11 +6,14 @@ Rails.application.routes.draw do
   resources :registrations
   resources :sessions
   resources :enrollments
-  
+
   get 'users/new'
   get 'static_pages/home'
 
-  
+  get "instructors", to: "instructors#show"
+  get "courses", to: "courses#show"
+  get "subjects", to: "subjects#show"
+
   get "sign_up", to: "registrations#new"
   post "sign_up", to:  "registrations#create"
 
@@ -19,7 +22,7 @@ Rails.application.routes.draw do
 
   delete "logout", to: "sessions#destroy"
   
-
+  get 'search' => 'pages#show'
 
   root 'static_pages#home'
 end
