@@ -1,9 +1,9 @@
 class PagesController < ApplicationController
     def search
         if params[:subject].blank?
-            @courses = Course.where("name LIKE ?", "%#{params[:search_text]}%")
+            @courses = Course.where("name ILIKE ?", "%#{params[:search_text]}%")
           else
-            @courses = Subject.find(params[:subject]).courses.where("name LIKE ?",
+            @courses = Subject.find(params[:subject]).courses.where("name ILIKE ?",
                                     "%#{params[:search_text]}%")
           end
     end
