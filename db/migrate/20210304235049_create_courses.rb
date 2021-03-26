@@ -6,6 +6,7 @@ class CreateCourses < ActiveRecord::Migration[6.1]
       t.string :description
       t.string :code
       t.string :course_id
+      t.array :sub
 
       t.timestamps
     end

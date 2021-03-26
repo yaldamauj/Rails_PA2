@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   resources :sessions
   resources :enrollments
 
+  get 'instructors/import' => "instructors#my_import"
+  get 'courses/import' => "courses#my_import"
+  get 'subjects/import' => "subjects#my_import"
+  
   get 'users/new'
   get 'static_pages/home'
 
@@ -24,7 +28,6 @@ Rails.application.routes.draw do
   
   get 'search' => 'pages#show'
 
- 
 
   root 'static_pages#home'
 end
