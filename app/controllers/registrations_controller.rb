@@ -7,7 +7,7 @@ class RegistrationsController < ApplicationController
        @user = User.new(user_params)
        if @user.save
         session[:user_id] = @user.id
-        redirect_to root_path, notice: "Created account successfully"
+        redirect_to sign_in_path, notice: "Created account successfully"
        else
         render :new
        end
