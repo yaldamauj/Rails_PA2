@@ -3,6 +3,7 @@ class PagesController < ApplicationController
         if params[:subject].blank?
             @courses = Course.where("name ILIKE ?", "%#{params[:search_text]}%")
           else
+            
           end
     end
 
