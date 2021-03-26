@@ -1,24 +1,3 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+In my rails PA part 2, I implemented a search function that allows the user to search for a key word and it would show all the course that contains that key word. The problems is that my heroku is not working with the search bar but it works on my local server. 
+I also created a user model wit user account. This way, one can login with the correct credentials or sign up if needed. A logged in user has access to the list of instructors, courses and subjects. They are also allowed to search for courses. 
+Unfortunately, I wasn't able to implement the the enrollment where the user can enroll into a course and drop down option of the search bar. 
